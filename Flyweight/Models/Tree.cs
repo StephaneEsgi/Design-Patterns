@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 using System.Collections.Generic;
 
 namespace Flyweight
@@ -12,12 +13,14 @@ namespace Flyweight
             this.shapes = shapes;
         }
 
-        public void Render()
+        public string Render()
         {
+            StringBuilder sb = new StringBuilder();
             foreach (var shape in shapes)
             {
-                System.Console.Write(shape + " ");
+                sb.Append(shape.Name).Append(" ");
             }
+            return sb.ToString();
         }
     }
 }
