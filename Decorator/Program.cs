@@ -6,7 +6,12 @@ namespace Decorator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            TextView basic = new TextView{ Text = "Je suis une textView avec un texte ^^ !" };
+
+            TextView scrollable = new TextViewScrollableDecorator(basic);
+
+            System.Console.WriteLine(basic);
+            System.Console.WriteLine(scrollable);
         }
     }
 }
