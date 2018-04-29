@@ -6,7 +6,9 @@ namespace TemplateMethod
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var mainActivity = new MainActivity();
+            mainActivity.Begin();
+            mainActivity.End();
         }
     }
 }

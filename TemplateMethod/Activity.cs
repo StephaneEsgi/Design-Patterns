@@ -50,6 +50,7 @@ namespace TemplateMethod
             WriteLine("[Activity] OnDestroy()");
         }
 
+        // on délègue l'implémentation aux classes concrètes qui fourniront cette ressource
         public abstract string GetLayoutRes();
 
     }
