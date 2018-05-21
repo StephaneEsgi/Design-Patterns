@@ -40,6 +40,10 @@ namespace Prototype
             deepRebornMarieCurie.BirthDate = new DateTime(1987, 11, 7);
             WriteLine(deepRebornMarieCurie);
 
+
+            // au travers d'une Factory
+            var rebornMarieCurieFromPrototypeFactory = PrototypeFactory.GetPrototype<Student>();
+            System.Console.WriteLine(rebornMarieCurieFromPrototypeFactory);
         }
     }
 }
