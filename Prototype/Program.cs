@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using Newtonsoft.Json;
+using static System.Console;
 
 namespace Prototype
 {
@@ -25,12 +27,18 @@ namespace Prototype
                 }
             };
 
-            System.Console.WriteLine(teacher1);
-            System.Console.WriteLine(trueMarieCurie);
+            WriteLine(teacher1);
+            WriteLine(trueMarieCurie);
 
             var rebornMarieCurie = trueMarieCurie.Clone();
             rebornMarieCurie.BirthDate = new DateTime(1987, 11, 7);
-            System.Console.WriteLine(rebornMarieCurie);
+            WriteLine(rebornMarieCurie);
+
+
+            // au travers du mécanisme de deep-copy
+            var deepRebornMarieCurie = JsonConvert.DeserializeObject<Student>(JsonConvert.SerializeObject(trueMarieCurie));
+            deepRebornMarieCurie.BirthDate = new DateTime(1987, 11, 7);
+            WriteLine(deepRebornMarieCurie);
 
         }
     }
