@@ -4,7 +4,7 @@ namespace AbstractFactory
 {
     public class MiddleRangeComputerFactory : AbstractFactory
     {
-        public override Cpu createCpu()
+        public override Cpu CreateCpu()
         {
             return new Cpu {
                 Brand = "Intel",
@@ -13,14 +13,22 @@ namespace AbstractFactory
             };
         }
 
-        public override MotherBoard createMotherBoard()
+        public override MotherBoard CreateMotherBoard()
         {
-            return new MotherBoard();
+            return new MotherBoard {
+                Brand = "Msi",
+                ModelName = "Middle range",
+                Price = 109f
+            };
         }
 
-        public override Ram createRam()
+        public override Ram CreateRam()
         {
-            return new Ram();
+            return new Ram {
+                RamType = "DDR3",
+                GbSize = 8,
+                Price = 160f
+            };
         }
     }
 }

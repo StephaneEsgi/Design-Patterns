@@ -6,6 +6,6 @@ namespace AbstractFactory
     {
         public string RamType { get; set; }
         public int GbSize { get; set; }
-        public int Price { get; set; }
+        public float Price { get; set; }
     }
 }

@@ -4,7 +4,7 @@ namespace AbstractFactory
 {
     public class BottomRangeComputerFactory : AbstractFactory
     {
-        public override Cpu createCpu()
+        public override Cpu CreateCpu()
         {
             return new Cpu {
                 Brand = "AMD",
@@ -13,14 +13,22 @@ namespace AbstractFactory
             };
         }
 
-        public override MotherBoard createMotherBoard()
+        public override MotherBoard CreateMotherBoard()
         {
-            return new MotherBoard();
+            return new MotherBoard {
+                Brand = "Acer",
+                ModelName = "Bottom range",
+                Price = 49f
+            };
         }
 
-        public override Ram createRam()
+        public override Ram CreateRam()
         {
-            return new Ram();
+            return new Ram {
+                RamType = "DDR2",
+                GbSize = 4,
+                Price = 70f
+            };
         }
     }
 }

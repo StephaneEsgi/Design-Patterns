@@ -4,17 +4,17 @@ namespace AbstractFactory
 {
     public class OutOfRangeComputerFactory : AbstractFactory
     {
-        public override Cpu createCpu()
+        public override Cpu CreateCpu()
         {
             return new Cpu();
         }
 
-        public override MotherBoard createMotherBoard()
+        public override MotherBoard CreateMotherBoard()
         {
             return new MotherBoard();
         }
 
-        public override Ram createRam()
+        public override Ram CreateRam()
         {
             return new Ram();
         }

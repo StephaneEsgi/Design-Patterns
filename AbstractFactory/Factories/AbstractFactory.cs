@@ -15,14 +15,14 @@ namespace AbstractFactory
             factories.Add(Budget.OUT, new OutOfRangeComputerFactory());
         }
 
-        static AbstractFactory GetFactory(Budget budget)
+        public static AbstractFactory GetFactory(Budget budget)
         {
             return factories[budget];
 }
 
 
-        public abstract Cpu createCpu();
-        public abstract MotherBoard createMotherBoard();
-        public abstract Ram createRam();
+        public abstract Cpu CreateCpu();
+        public abstract MotherBoard CreateMotherBoard();
+        public abstract Ram CreateRam();
     }
 }
